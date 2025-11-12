@@ -17,6 +17,10 @@ fn add_10_blocks_2d(
 ):
     row = block_dim.y * block_idx.y + thread_idx.y
     col = block_dim.x * block_idx.x + thread_idx.x
+    # if Int(row) < size and Int(col) < size:
+    if row < size and col < size:
+        index = row * size + col
+        output[index] = a[index] + 10
     # FILL ME IN (roughly 2 lines)
 
 
