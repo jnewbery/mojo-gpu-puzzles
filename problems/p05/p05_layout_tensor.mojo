@@ -25,7 +25,7 @@ fn broadcast_add[
 ):
     row = thread_idx.y
     col = thread_idx.x
-    if Int(row) < size and Int(col) < size:
+    if row < size and col < size:
         output[row, col] = a[0, col] + b[row, 0]
 
 
